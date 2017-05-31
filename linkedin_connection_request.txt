@@ -1,0 +1,104 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+hr.style1{
+	border-top: 1px solid #EDF0F3;
+	width:500px;
+}
+table {
+	width:100%;
+}
+.nametext {
+    font-size:0.9em;
+}
+.subtext1 {
+	font-size:0.8em;
+	color:#808080;
+}
+.subtext2 {
+	font-size:0.75em;
+	color:#808080;
+    text-align:center;
+    width:500px;
+    margin:0 auto;
+    padding:20px;
+}
+.subtext2link {
+    color:inherit;
+}
+.buttonlink{
+    text-decoration: none;
+    color: inherit;
+}
+.button1 {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2px;
+    color: black;
+    padding: 5px;
+    padding-left: 17px;
+    padding-right: 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+}
+.button2 {
+    background-color: #008CC9;
+    border: 1px solid #008CC9;
+    border-radius: 2px;
+    color: white;
+    padding: 5px;
+    padding-left: 17px;
+    padding-right: 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+}
+	</style>
+</head>
+<body style="background-color:#EDF0F3;font-family:sans-serif;">
+<div style="width:500px;background-color:white;margin:0 auto;padding:10px;text-align:left;">
+<table>
+	<tbody>
+		<tr>
+			<td style="width:40px;"><img src="http://server_ip/static/linkedin/LI-logo.png" style="height: 35px;" /></td>
+			<td style="text-align:right"><span class="nametext">{{.FirstName}} {{.LastName}}</span></td>
+			<td style="text-align:right;width:40px;"><img src="http://server_ip/static/linkedin/no-face.jpg" style="height: 35px;border-radius:17px;" /></td>
+		</tr>
+	</tbody>
+</table>
+
+<hr class="style1" />&nbsp;
+<p>Hi {{.FirstName}}, I&#39;d like to join your LinkedIn network.</p>
+
+<table>
+	<tbody>
+		<tr>
+			<td style="vertical-align:top;"><img src="http://server_ip/static/linkedin/suit-guy.jpg" style="width:75px;border-radius:37px;" /></td>
+			<td style="vertical-align:top;"><b>John Smith</b><br />
+			<span class="subtext1">Owner, SmithTech Solutions<br />
+			Houston, Texas Area</span><br />
+			<br />
+			<a class="button1" href="{{.URL}}">View profile</a>&nbsp;&nbsp;<a class="button2" href="{{.URL}}">Accept</a></td>
+		</tr>
+	</tbody>
+</table>
+<br />
+&nbsp;</div>
+
+<div class="subtext2"><a class="subtext2link" href="http://www.linkedin.com/psettings/guest-email-unsubscribe">Unsubscribe</a> &nbsp;&nbsp;|&nbsp;&nbsp;<a class="subtext2link" href="http://www.linkedin.com/help/linkedin?lang=en">Help</a><br />
+<br />
+You are receiving Invitation emails.<br />
+<br />
+This email was intended for {{.FirstName}} {{.LastName}}.<br />
+<a class="subtext2link" href="http://www.linkedin.com/help/linkedin/answer/4788">Learn why we included this.</a><br />
+<br />
+<img src="http://192.168.221.85/static/linkedin/LI-logo3.png" style="height:15px" /><br />
+<br />
+&copy; 2017 LinkedIn Corporation, 1000 West Maude Avenue, Sunnyvale, CA 94085.<br />
+LinkedIn and the LinkedIn logo are registered trademarks of LinkedIn.</div>
+{{.Tracker}}</body>
+</html>
